@@ -27,7 +27,7 @@ pipeline {
                 sh 'kubectl apply -f service.yml'
             }
         }
-        stage('Deploy to Kubernetes') {
+        stage('Scale Deployment') {
             steps {
                 sh 'kubectl scale deployment helloworld-deployment --replicas=3'
             }
